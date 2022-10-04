@@ -1,5 +1,41 @@
 body {
     font-size: 14px;
-    color: rgb(126, 233, 255);
-    font: poppins;
+    color: #36476D;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F1F1F1;
+}
+
+.box {
+    border-radius: 16px;
+    padding: 24px;
+    background-color: #AFD7FA;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.logo{
+    
+}
+
+.title{
+    text-align: center;
+}
+
+.buttonGreen{
+    background-color: #56C854;
+    border: none;
+    color: white;
+    border-radius: 16px;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.inputSource{
+    background-color: white;
+    color: black;
+    padding: 15px 60px;
+    border: none;
+    margin: 15px;
 }
