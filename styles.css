@@ -10,17 +10,37 @@ body {
     padding: 24px;
     background-color: #AFD7FA;
     color: white;
-    display: flex;
-    justify-content: space-around;
-    
+    display: flex;   
+    margin-left: 25px; 
+    margin-right: 25px;
+    margin-top: 20px;
 }
 
 .logo{
-    
+   margin-bottom: 0; 
 }
 
 .title{
     text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.inputSource{
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    margin: 15px;
+    flex: 1;
+    font-size: 1em;
+}
+
+.inputText{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.2em;
 }
 
 .buttonGreen{
@@ -28,14 +48,59 @@ body {
     border: none;
     color: white;
     border-radius: 16px;
-    padding: 10px 25px;
+    padding: 7px 25px;
     text-align: center;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5em;
+    font-family: Poppins, sans-serif;
 }
 
-.inputSource{
-    background-color: white;
-    color: black;
-    padding: 15px 60px;
+.buttonRed {
+    background-color: #FF7676;
     border: none;
-    margin: 15px;
+    color: white;
+    border-radius: 16px;
+    padding: 7px 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5em;
+    font-family: Poppins, sans-serif;
+}
+
+.listItem {
+    display: flex;
+    border-radius: 16px;
+    padding: 5px;
+    padding-right: 24px;
+    background-color:white;
+    display: flex;  
+    margin-left: 30px; 
+    margin-right: 30px;
+    margin-top: 20px;  
+}
+
+.listName {
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5em;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.listEmail {
+    color: #828EA6;
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.centeredText {
+    flex: 1;
 }
