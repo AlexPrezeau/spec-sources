@@ -19,8 +19,9 @@ function App() {
     setEmailList(updatedList);
   }
 
-  function handleAdd() {
-
+  function handleAdd(sourceName, email) {
+    const updatedList = emailList.concat([source: sourceName, sourceEmail: email ])
+    //at 26:56 in video!
   }
 
   return (
@@ -34,8 +35,7 @@ function App() {
           <h1> Spectator's Sources</h1>
       </div>
 
-      <Form/>
-      <List/>
+      <Form handleAdd={handleAdd}/>
       <List emailList={emailList} handleDelete={handleDelete}/>
     </body>
   );

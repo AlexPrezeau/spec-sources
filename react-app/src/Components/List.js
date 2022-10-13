@@ -1,4 +1,3 @@
-import close from "./close.png"
 
 function List(emailList, handleDelete) {
     return(
