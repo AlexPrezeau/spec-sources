@@ -2,8 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 import Form from './Components/Form.js';
 import List from './Components/List.js';
+import React, {useState} from 'react';
+
+const initialList = [{source: "Presbo", sourceEmail: "presbo@columbia.edu"},
+                    {source: "John Jay Mouse", sourceEmail: "mouse@columbia.edu"},
+                    {source: "Water Bottle Man", sourceEmail: "flipper@columbia.edu"}]
 
 function App() {
+  
+  const [emailList, setEmailList] = useState([initialList]);
+         //[variable, setter method] = useState([the initial state])
+
+  function handleDelete(emailIndex) {
+    const updatedList = emailList.slice(0, emailIndex).concat(emailList.slice[emailIndex + 1]); 
+
+    setEmailList(updatedList);
+  }
+
+  function handleAdd() {
+
+  }
+
   return (
     <body>
       <div class="logo">
@@ -17,6 +36,7 @@ function App() {
 
       <Form/>
       <List/>
+      <List emailList={emailList} handleDelete={handleDelete}/>
     </body>
   );
 }

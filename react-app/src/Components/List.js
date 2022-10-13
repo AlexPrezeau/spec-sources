@@ -1,12 +1,10 @@
-const emailList = [{source: "Presbo", sourceEmail: "presbo@columbia.edu"},
-                    {source: "John Jay Mouse", sourceEmail: "mouse@columbia.edu"},
-                    {source: "Water Bottle Man", sourceEmail: "flipper@columbia.edu"}]
+import close from "./close.png"
 
-function List() {
+function List(emailList, handleDelete) {
     return(
        <body>
         {emailList.map((person, idx) => 
-            (<ListItem index={idx+1} source={person.source} sourceEmail={person.sourceEmail}/>
+            (<ListItem index={idx} source={person.source} sourceEmail={person.sourceEmail} handleDelete={handleDelete}/>
         ))}
        </body>
     );
@@ -14,14 +12,14 @@ function List() {
 
 export default List;
 
-function ListItem({index, source, sourceEmail}) {
+function ListItem({index, source, sourceEmail, handleDelete}) {
 
     return(
         <div class="listItem">
-        <div class="listName">{index} </div>
+        <div class="listName">{index + 1} </div>
         <div class="listName centeredText">{source}</div>
         <div class="listEmail centeredText">{sourceEmail}</div> 
-        <button class="buttonRed">DELETE</button>
+        <button class="buttonRed" onClick={() => handleDelete()}>DELETE</button>
     </div>
     );
 
