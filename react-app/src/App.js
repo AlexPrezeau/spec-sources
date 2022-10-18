@@ -20,8 +20,10 @@ function App() {
   }
 
   function handleAdd(sourceName, email) {
-    const updatedList = emailList.concat([source: sourceName, sourceEmail: email ])
-    //at 26:56 in video!
+    const updatedList = emailList.concat([{source: sourceName, sourceEmail: email}])
+    //const updatedList = (...emailList, {source: sourceName, sourceEmail: email});
+    setEmailList(updatedList);
+    
   }
 
   return (
