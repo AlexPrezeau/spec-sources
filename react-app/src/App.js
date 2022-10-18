@@ -10,18 +10,19 @@ const initialList = [{source: "Presbo", sourceEmail: "presbo@columbia.edu"},
 
 function App() {
   
-  const [emailList, setEmailList] = useState([initialList]);
+  const [emailList, setEmailList] = useState(initialList);
          //[variable, setter method] = useState([the initial state])
 
   function handleDelete(emailIndex) {
-    const updatedList = emailList.slice(0, emailIndex).concat(emailList.slice[emailIndex + 1]); 
-
+    console.log(emailIndex);
+    const updatedList = emailList.slice(0, emailIndex).concat(emailList.slice(emailIndex+1)); 
+    console.log(updatedList);
     setEmailList(updatedList);
   }
 
   function handleAdd(sourceName, email) {
-    const updatedList = emailList.concat([{source: sourceName, sourceEmail: email}])
-    //const updatedList = (...emailList, {source: sourceName, sourceEmail: email});
+    //const updatedList = emailList.concat([{source: sourceName, sourceEmail: email}])
+    const updatedList = [...emailList, {source: sourceName, sourceEmail: email}];
     setEmailList(updatedList);
     
   }
